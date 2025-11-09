@@ -1,0 +1,408 @@
+
+html, body{
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden; 
+    
+}
+
+.texto-normal {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Regular */
+    font-size: 16px; /* Ajusta según necesidad */
+    line-height: 1.5; /* Espaciado adecuado para lectura */
+    color: #333; /* Color de texto oscuro para buena visibilidad */
+  }
+  
+.Titulo-Principal{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800; /* ExtraBold */
+    font-size: 30px;
+  }  
+
+.encabezado{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mobile-menu{
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20px; 
+    top: 24px;
+    width: 100%;
+    padding: 20px 0;
+    
+    line-height: 267%;
+}
+
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.illustration {
+    animation: girar 3s ease-in-out infinite;
+}
+
+
+#espiral1{
+    position: absolute;
+}
+
+#espiral2{
+    width: 17rem;
+    height: 17rem;
+    bottom: 11rem;
+}
+
+#espiral3{
+    width: 11rem;
+    height: 11rem;
+    top: -43rem;
+}
+
+#espiblanco1{
+    max-height: 700px;
+    max-width: 700px;
+    width: 25rem;
+    height: 25rem;
+    left: -38rem;
+    top: -24rem;
+}
+
+#espiblanco2{
+    max-height: 600px;
+    max-width: 600px;
+    width: 23rem;
+    height: 23rem;
+    right: -12rem;
+    bottom: -24rem;
+}
+
+#TortadeHamon{
+    max-height: 190px;
+    max-width: 190px;
+}
+
+#CelularMano{
+    max-height: 190px;
+    max-width: 190px;
+}
+
+#celular{
+    width: 50rem;
+}
+
+#aplicativo{
+    width: 17rem;
+    transform: rotate(30deg);
+}
+
+@media (min-width: 768px) {
+
+
+    #aplicativo{
+        width: 34rem;
+    }
+
+    #espiblanco1{
+        width: 75rem;
+        height: 75rem;
+        left: -70rem;
+        top: -30rem;
+    }
+
+    #espiblanco2{
+        max-height: 370px;
+        max-width: 370px;
+        width: 70rem;
+        height: 70rem;
+        right: -4rem;
+    }
+
+    #espiral2{
+        width: 40rem;
+        height: 40rem;
+    }
+
+    #espiral3{
+        width: 30rem;
+        height: 30rem;
+        top: -67rem;
+    }
+
+    #TortadeHamon{
+        max-height: 270px;
+        max-width: 270px;
+        left: 83%;
+    }
+
+    #CelularMano{
+        max-height: 270px;
+        max-width: 270px;
+        left: 16%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #aplicativo{
+        width: 30rem;
+        transform: rotate(39deg);
+    }
+
+    #espiblanco1{
+        width: 100rem;
+        height: 100rem;
+        left: -77rem;
+        top: -30rem;
+    }
+
+    #espiblanco2{
+        width: 130rem;
+        height: 130rem;
+        right: -25rem;
+        bottom: -24rem;
+    }
+
+    #espiral1{
+        width: 38rem;
+        height: 38rem;
+    }
+
+    #espiral2{
+        bottom: -19rem;
+        width: 44rem;
+        height: 44rem;
+    }
+
+    #TortadeHamon{
+        max-height: 350px;
+        max-width: 350px;
+        left: 76vw;
+    }
+
+    #CelularMano{
+        max-height: 400px;
+        max-width: 400px;
+        left: 22vw;
+    }
+}
+
+@media (min-width: 1300px) {
+    #TortadeHamon{
+        max-height: 350px;
+        max-width: 350px;
+        left: 71vw;
+    }
+
+    #CelularMano{
+        max-height: 400px;
+        max-width: 400px;
+        left: 27vw;
+    }
+}
+
+@media (min-width: 1536px) {
+
+    #celular{
+        width: 47rem;
+    }
+    
+    #espiblanco1{
+        width: 100rem;
+        height: 100rem;
+        left: -90rem;
+        top: -30rem;
+    }
+
+    #espiblanco2{
+        width: 100rem;
+        height: 100rem;
+        right: -33rem;
+        bottom: -26rem;
+    }
+
+    #TortadeHamon{
+        max-height: 350px;
+        max-width: 350px;
+        left: 68vw;
+    }
+
+    #CelularMano{
+        max-height: 400px;
+        max-width: 400px;
+        left: 30vw;
+    }
+
+}
+
+.header.scrolled {
+    background-color: #f54d3d; /* Color de fondo cuando se desplaza */
+    color:  #fffbf5; /* Color de texto cuando se desplaza */
+}
+
+
+.logo {
+    justify-content: center;
+}
+
+
+.nav a.active {
+    font-weight: bold;
+    color:  #fffbf5; /* Negrita para la opción activa */
+}
+
+.nav a:hover {
+    color:  #fffbf5;
+    font-weight: bold; /* Negrita al pasar el mouse */
+}
+
+#Inicio{
+    height: 96vh; /* Cada sección ocupa toda la altura de la ventana */
+    display: flex; /* Usar flexbox para centrar contenido */
+    flex-direction: column; /* Alinear elementos en columna */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+#flecha-abajo{
+    display: flex; /* Usar flexbox para centrar contenido */
+    flex-direction: column; /* Alinear elementos en columna */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+#ComoFunciona{
+    color: #fffbf5;
+    text-align: center;
+    flex-direction: column; /* Alinear elementos en columna */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    border-top: 1px solid #565656;
+    border-bottom: 1px solid #565656;
+    background-color:#f54d3d;
+    padding-top: 90px;
+    padding-bottom: 80px;
+    
+}
+
+#Formulario_Enviado{
+    color:  #fffbf5;
+    text-align: center;
+    background-color:#f54d3d;
+}
+
+.here{
+    justify-content: space-around;
+    margin-top: 10px;
+    padding: 80px;
+}
+
+.cards {
+    margin-top: 0;
+}
+
+.card {
+
+    padding: 55px;
+    border-radius: 10;
+
+}
+
+·bajada-ComoFunciona{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 1000;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (min-width: 1024px) {
+    #Inicio{
+
+        height: 110vh;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+
+    .card {
+
+        padding: 30px;
+        border-radius: 10
+    }
+
+    .bajada-ComoFunciona{
+        text-align: center;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+    }
+}
+
+
+.faq-container {
+    padding-top: 6%;
+    margin: 0 auto;
+    background:  #fffbf5;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+  }
+  
+ 
+  .faq-item {
+    border-bottom: 1px solid #000000;
+    padding: 8px 0;
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 18px;
+    color: #444;
+  }
+  
+  .plus {
+    font-weight: bold;
+    font-size: 24px;
+    color: #666;
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+    background-color: #fffbf5;
+  }
+
+  h2{
+    text-align: center;
+
+  }
+
+  .faq-columns {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .faq-column {
+    width: 48%;
+  }
+
+

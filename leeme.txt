@@ -1,0 +1,19 @@
+> create-vite
+
+√ Project name: ... eatmain
+√ Select a framework: » Svelte
+√ Select a variant: » JavaScript
+
+Done. Now run:
+
+  cd eatmain
+  npm install
+  npm run dev
+
+  instalar tailwindcss
+  https://tailwindcss.com/docs/installation/using-vite
+  npm install tailwindcss @tailwindcss/vite
+
+  instalar router
+  https://www.npmjs.com/package/svelte-spa-router
+  npm i svelte-spa-router
