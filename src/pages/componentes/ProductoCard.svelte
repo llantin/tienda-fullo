@@ -22,7 +22,7 @@
   $: currentQtyInCart = (get(cart).find(i => i.id === id)?.quantity) ?? 0;
 
   // URL completa de la imagen con fallback
-  $: imageUrl = image ? `${API_BASE_URL}/storage/${image}` : '/imagenes/productodefecto.JPG';
+  $: imageUrl = image ? `${API_BASE_URL}/${image}` : '/imagenes/productodefecto.JPG';
 
   function handleImageError(e) {
     e.target.src = '/imagenes/productodefecto.JPG';

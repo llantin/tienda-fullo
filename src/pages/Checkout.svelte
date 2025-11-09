@@ -57,7 +57,7 @@
             <div class="flex flex-col sm:flex-row items-center justify-between py-5">
               <div class="flex items-center gap-4 flex-1">
                 <img
-                  src={item.image ? `${API_BASE_URL}/storage/${item.image}` : "/imagenes/productodefecto.JPG"}
+                  src={item.image ? `${API_BASE_URL}/${item.image}` : "/imagenes/productodefecto.JPG"}
                   alt={item.name}
                   on:error={handleImageError}
                   class="w-20 h-20 object-cover border border-gray-200 rounded-md"

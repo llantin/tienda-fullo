@@ -69,7 +69,7 @@
     <div class="w-[80vw] mx-auto bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row animate-fadeIn">
       <div class="md:w-1/2 bg-gray-50  items-center justify-center p-6 inline-block">
         <img
-          src={producto.image ? `${API_BASE_URL}/storage/${producto.image}` : "/imagenes/productodefecto.JPG"}
+          src={producto.image ? `${API_BASE_URL}/${producto.image}` : "/imagenes/productodefecto.JPG"}
           alt={producto.name}
           on:error={handleImageError}
           class="w-full max-w-md object-contain rounded-lg transition-transform duration-500 hover:scale-105"

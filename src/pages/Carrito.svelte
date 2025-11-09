@@ -66,7 +66,7 @@
             <li class="flex items-center justify-between py-3 border-b border-gray-200">
               <div class="flex items-center gap-3">
                 <img
-                  src={item.image ? `${API_BASE_URL}/storage/${item.image}` : '/imagenes/productodefecto.JPG'}
+                  src={item.image ? `${API_BASE_URL}/${item.image}` : '/imagenes/productodefecto.JPG'}
                   alt={item.name}
                   on:error={handleImageError}
                   class="w-16 h-16 object-cover rounded-lg"
