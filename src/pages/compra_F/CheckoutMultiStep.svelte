@@ -60,35 +60,31 @@
       });
 
       const json = await res.json();
-      if (!res.ok) throw new Error(json.message || "Error");
 
+      if (!res.ok) {
+        // Laravel devuelve status 422 con los errores de validación
+        let mensaje = "Error al procesar el pago: ";
+        mensaje += json.message ?? "Ocurrió un error.";
+
+        if (json.errors) {
+          const detalles = Object.values(json.errors).flat().join("\n");
+          mensaje += "\n" + detalles;
+        }
+
+        throw new Error(mensaje);
+      }
+
+      // ✅ Si todo fue bien
       cart.set([]);
 
-      // Aquí obtenemos el hashOrden del backend y redirigimos usando ese valor
       const hashOrden = json.data?.delivery?.hashOrden;
-
       if (hashOrden) {
-        push(`/checkout/success/${hashOrden}`); // Redirigir usando el hashOrden
+        push(`/checkout/success/${hashOrden}`);
       } else {
         alert("Error: No se ha recibido un hashOrden válido.");
       }
     } catch (err) {
-      let mensaje = "Error al procesar el pago: ";
-
-      if (err.response && err.response.data) {
-        const data = err.response.data;
-        mensaje += data.message ?? err.message ?? "Ocurrió un error.";
-
-        if (data.errors) {
-          // Convertir los errores en texto legible
-          const detalles = Object.values(data.errors).flat().join("\n");
-          mensaje += "\n" + detalles;
-        }
-      } else {
-        mensaje += err.message ?? "Ocurrió un error inesperado.";
-      }
-
-      alert(mensaje);
+      alert(err.message ?? "Ocurrió un error inesperado.");
     } finally {
       processing = false;
     }
