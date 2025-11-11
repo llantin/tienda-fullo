@@ -45,7 +45,7 @@
       longitud: delivery.longitud,
       receipt_code: "CC-" + Math.floor(Math.random() * 99999),
       description: buyer.document_type === "RUC" ? "Factura" : "Boleta",
-      user_id: 3,
+      user_id: 2,
       type: "Venta",
       articulos,
     };
